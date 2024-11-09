@@ -370,20 +370,22 @@ document.write(`
 <p>As the column selection is a scalar selection, the return value is a mulseries rather than a muldataframe. The hierachical indexing in pandas implements a different behavior that a scalar selection in a data frame on a single level still results in a data frame. Only when selections on <em>all</em> levels are scalar selections does hierachical indexing result in a series. In successive indexing, a scalar selection on <em>any</em> level results in a mulseries. We believe our implementation is a more intuitive choice as it is what is expected from a single index. Of note, a scalar label does not always lead to a scalar selection as the label might be duplicated.</p>
 <p id="successive-indexing">The reason successive indexing is named as such is illustrated by the following example:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">6</span><span class="p">]]</span>
-<span class="go">(3, 2)    g  7  6</span>
-<span class="go">          f  5  3</span>
-<span class="go">             c  d</span>
-<span class="go">--------  ---------</span>
-<span class="go">   x  y      c  d</span>
-<span class="go">b  3  6   b  8  9</span>
+<span class="go">(2,)     y  6</span>
+<span class="go">         x  3</span>
+<span class="go">            b</span>
+<span class="go">-------  ------</span>
+<span class="go">   f  g     b</span>
+<span class="go">c  5  7  c  8</span>
+<span class="go">d  3  6  d  9</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span> <span class="o">=</span> <span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[</span><span class="o">...</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
-<span class="go">(3, 2)    g  7  6</span>
-<span class="go">          f  5  3</span>
-<span class="go">             c  d</span>
-<span class="go">--------  ---------</span>
-<span class="go">   x  y      c  d</span>
-<span class="go">b  3  6   b  8  9</span>
+<span class="go">(2,)     y  6</span>
+<span class="go">         x  3</span>
+<span class="go">            b</span>
+<span class="go">-------  ------</span>
+<span class="go">   f  g     b</span>
+<span class="go">c  5  7  c  8</span>
+<span class="go">d  3  6  d  9</span>
 </pre></div>
 </div>
 <p>So a multi-indexing operation on a muldataframe is the same as successively applying the indexer in each column of the index data frame to the muldataframe. It adheres to the idea that a multi-index is just a collection of single indexes. Hierarchical indexing in pandas, on the other hand, is more like selecting the intersection of the different levels’ indexers. Their difference is illustrated by the following example:</p>
