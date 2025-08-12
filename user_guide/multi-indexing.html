@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://frlender.github.io/muldataframe-doc/_static/favicon.ico?" rel="icon">
+    <title>Multi-indexing &#8212; &lt;img style=&#34;width:50px; margin-right:0.5em&#34; src=&#34;https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png&#34;&gt;MulDataFrame</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/multi-indexing';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Query" href="query.html" />
+    <link rel="prev" title="Indexing" href="indexing.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title"><img style="width:50px; margin-right:0.5em" src="https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png">MulDataFrame</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="initialization.html">Initialization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexing.html">Indexing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Multi-indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">Query</a></li>
+<li class="toctree-l1"><a class="reference internal" href="call_method.html">Call method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pandas_methods.html">Pandas methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numpy_functions.html">Numpy functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility_with_pandas.html">Operators and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grouping.html">Grouping</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">User Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Multi-indexing</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="multi-indexing">
+<h1>Multi-indexing<a class="headerlink" href="#multi-indexing" title="Link to this heading">#</a></h1>
+<section id="mloc">
+<h2>mloc<a class="headerlink" href="#mloc" title="Link to this heading">#</a></h2>
+<p>MulDataFrame uses <code class="docutils literal notranslate"><span class="pre">.mloc</span></code> to perform multi-indexing. It implements a different multi-indexing pattern from that of pandas. pandas implements hierarchical indexing while MulDataFrame implements what we call <em>successive indexing</em>. Their difference is discussed later on this page. The input to <code class="docutils literal notranslate"><span class="pre">.mloc</span></code> can be a list or a dict. If a list is used, it has a similar syntax as that in pandas except that you don’t need to create a <code class="docutils literal notranslate"><span class="pre">pandas.IndexSlicer</span></code> object. Just input a plain list with <code class="docutils literal notranslate"><span class="pre">...</span></code> as placeholders to select all values in a column.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span>
+<span class="go">(3, 2)    g  7  6</span>
+<span class="go">          f  5  3</span>
+<span class="go">             c  d</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c  d</span>
+<span class="go">a  1  2   a  1  2</span>
+<span class="go">b  3  6   b  8  9</span>
+<span class="go">b  5  6   b  8  7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[</span><span class="o">...</span><span class="p">,</span> <span class="mi">6</span><span class="p">],[</span><span class="mi">3</span><span class="p">]]</span>
+<span class="go">(2,)     g  6</span>
+<span class="go">         f  3</span>
+<span class="go">            d</span>
+<span class="go">-------  ------</span>
+<span class="go">   x  y     d</span>
+<span class="go">b  3  6  b  9</span>
+<span class="go">b  5  6  b  7</span>
+</pre></div>
+</div>
+<p>The above example uses the “y” column in the index dataframe to select the 2nd and 3rd rows and the “f” columns in the columns dataframe to select the 2nd column.</p>
+<p>As the column selection is a scalar selection, the return value is a mulseries rather than a muldataframe. The hierachical indexing in pandas implements a different behavior that a scalar selection in a data frame on a single level still results in a data frame. Only when selections on <em>all</em> levels are scalar selections does hierachical indexing result in a series. In successive indexing, a scalar selection on <em>any</em> level results in a mulseries. We believe our implementation is a more intuitive choice as it is what is expected from a single index. Of note, a scalar label does not always lead to a scalar selection as the label might be duplicated.</p>
+<p id="successive-indexing">The reason successive indexing is named as such is illustrated by the following example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="go">(2,)     y  6</span>
+<span class="go">         x  3</span>
+<span class="go">            b</span>
+<span class="go">-------  ------</span>
+<span class="go">   f  g     b</span>
+<span class="go">c  5  7  c  8</span>
+<span class="go">d  3  6  d  9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span> <span class="o">=</span> <span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[</span><span class="o">...</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="go">(2,)     y  6</span>
+<span class="go">         x  3</span>
+<span class="go">            b</span>
+<span class="go">-------  ------</span>
+<span class="go">   f  g     b</span>
+<span class="go">c  5  7  c  8</span>
+<span class="go">d  3  6  d  9</span>
+</pre></div>
+</div>
+<p>So a multi-indexing operation on a muldataframe is the same as successively applying the indexer in each column of the index data frame to the muldataframe. It adheres to the idea that a multi-index is just a collection of single indexes. Hierarchical indexing in pandas, on the other hand, is more like selecting the intersection of the different levels’ indexers. Their difference is illustrated by the following example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]]]</span>
+<span class="go">Error</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">mf</span><span class="o">.</span><span class="n">df</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_frame</span><span class="p">(</span><span class="n">mf</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span>
+<span class="go">     c  d</span>
+<span class="go">x y</span>
+<span class="go">1 2  1  2</span>
+<span class="go">3 6  8  9</span>
+<span class="go">5 6  8  7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">IndexSlice</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ix</span><span class="p">[[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">]],:]</span>
+<span class="go">     c  d</span>
+<span class="go">x y</span>
+<span class="go">3 6  8  9</span>
+</pre></div>
+</div>
+<p>An intricacy to notice is that <code class="docutils literal notranslate"><span class="pre">mf.mloc[[3,[2,6]]]</span></code> does not report an error and returns the second row as a mulseries. This is because successive indexing is implemented as such that when a scalar selection is reached in the middle of a multi-indexing, the following indexers only need to include this selection to be valid. The example also shows you must fill in <code class="docutils literal notranslate"><span class="pre">:</span></code> as the column indexer in hierachical indexing even if you only need to index rows.</p>
+<p>With a dict as input, you can change the order of successive indexing and fix the error in the above example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[{</span><span class="s1">&#39;y&#39;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="s1">&#39;x&#39;</span><span class="p">:[</span><span class="mi">3</span><span class="p">]}]</span>
+<span class="go">(1, 2)    g  7  6</span>
+<span class="go">          f  5  3</span>
+<span class="go">             c  d</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c  d</span>
+<span class="go">b  3  6   b  8  9</span>
+<span class="go">```</span>
+</pre></div>
+</div>
+<p>In this example, the muldataframe is first indexed by the “y” column and then the “x” column of the index data frame.</p>
+<p>When there are duplicate names in the columns of the index or columns dataframe, use the <strong>last</strong> column for dict indexing.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span>
+<span class="go">(3, 2)      g  7  6</span>
+<span class="go">            f  5  3</span>
+<span class="go">               c  d</span>
+<span class="go">----------  ---------</span>
+<span class="go">   x  y  y     c  d</span>
+<span class="go">a  1  2  8  a  1  2</span>
+<span class="go">b  3  6  5  b  8  9</span>
+<span class="go">b  5  6  2  b  8  7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">mloc</span><span class="p">[{</span><span class="s1">&#39;y&#39;</span><span class="p">:[</span><span class="mi">2</span><span class="p">]}]</span>
+<span class="go">(1, 2)      g  7  6</span>
+<span class="go">            f  5  3</span>
+<span class="go">               c  d</span>
+<span class="go">----------  ---------</span>
+<span class="go">   x  y  y     c  d</span>
+<span class="go">b  5  6  2  b  8  7</span>
+</pre></div>
+</div>
+<p>Users can mixedly use the two types of indexers in a muldataframe with, for exmaple, a dict indexer for the rows and a list indexer for the columns.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[{</span><span class="s1">&#39;y&#39;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="s1">&#39;x&#39;</span><span class="p">:[</span><span class="mi">3</span><span class="p">]},[</span><span class="o">...</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
+<span class="go">(1,)      g  7</span>
+<span class="go">          f  5</span>
+<span class="go">             c</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c</span>
+<span class="go">b  3  6   b  8</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.mloc</span></code> is also implemented for MulSeries:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ms</span> <span class="o">=</span> <span class="n">mf</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ms</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[</span><span class="o">...</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="go">(2,)     g  7</span>
+<span class="go">         f  5</span>
+<span class="go">            c</span>
+<span class="go">-------  ------</span>
+<span class="go">   x  y     c</span>
+<span class="go">b  3  6  b  8</span>
+<span class="go">b  5  6  b  8</span>
+</pre></div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">.mloc</span></code> to set values:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf3</span> <span class="o">=</span> <span class="n">mf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf3</span><span class="o">.</span><span class="n">mloc</span><span class="p">[{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s1">&#39;f&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">}]</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf3</span><span class="o">.</span><span class="n">df</span>
+<span class="go">(3, 2)    g  7  6</span>
+<span class="go">          f  5  3</span>
+<span class="go">             c  d</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c  d</span>
+<span class="go">a  1  2   a  1  2</span>
+<span class="go">b  3  6   b  0  9</span>
+<span class="go">b  5  6   b  8  7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf3</span><span class="o">.</span><span class="n">mloc</span><span class="p">[[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf3</span><span class="o">.</span><span class="n">df</span>
+<span class="go">(3, 2)    g  7  6</span>
+<span class="go">          f  5  3</span>
+<span class="go">             c  d</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c  d</span>
+<span class="go">a  1  2   a  3  5</span>
+<span class="go">b  3  6   b  0  9</span>
+<span class="go">b  5  6   b  8  7</span>
+</pre></div>
+</div>
+</section>
+<section id="nloc">
+<h2>nloc<a class="headerlink" href="#nloc" title="Link to this heading">#</a></h2>
+<p>MulDataFrame and MulSeries also implements <code class="docutils literal notranslate"><span class="pre">.nloc</span></code> to enable position-based multi-indexing. If a list is used as input, it behaves exactly the same as <code class="docutils literal notranslate"><span class="pre">.mloc</span></code>.  If a dict is used, it behaves similarly to <code class="docutils literal notranslate"><span class="pre">.mloc</span></code> except that instead of using column names as keys, it uses the numeric positions of the columns as keys.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">nloc</span><span class="p">[{</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">}]</span>
+<span class="go">(2, 2)      g  7  6</span>
+<span class="go">            f  5  3</span>
+<span class="go">               c  d</span>
+<span class="go">----------  ---------</span>
+<span class="go">   x  y  y     c  d</span>
+<span class="go">b  3  6  5  b  8  9</span>
+<span class="go">b  5  6  2  b  8  7</span>
+</pre></div>
+</div>
+<p>Note that with a dict as input to <code class="docutils literal notranslate"><span class="pre">.mloc</span></code>, you can only select the last “y” column in the index dataframe. Using <code class="docutils literal notranslate"><span class="pre">.nloc</span></code> you can select the first “y” column.</p>
+<p><code class="docutils literal notranslate"><span class="pre">.nloc</span></code> can also be used to set values.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="indexing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Indexing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="query.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Query</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mloc">mloc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nloc">nloc</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/user_guide/multi-indexing.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Qiaonan Duan and Fei Wang.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

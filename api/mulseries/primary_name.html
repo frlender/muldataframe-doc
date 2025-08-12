@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://frlender.github.io/muldataframe-doc/_static/favicon.ico?" rel="icon">
+    <title>MulSeries.primary_name &#8212; &lt;img style=&#34;width:50px; margin-right:0.5em&#34; src=&#34;https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png&#34;&gt;MulDataFrame</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/mulseries/primary_name';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MulSeries.mindex" href="mindex.html" />
+    <link rel="prev" title="MulSeries.primary_index" href="primary_index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title"><img style="width:50px; margin-right:0.5em" src="https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png">MulDataFrame</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user_guide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user_guide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../pd_np.html">Pandas Methods</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="indices.html">MulSeries</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="mulseries.html">MulSeries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html">MulSeries.index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name.html">MulSeries.name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="values.html">MulSeries.values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ss.html">MulSeries.ss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ds.html">MulSeries.ds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape.html">MulSeries.shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primary_index.html">MulSeries.primary_index</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">MulSeries.primary_name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mindex.html">MulSeries.mindex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mname.html">MulSeries.mname</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pindex.html">MulSeries.pindex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pname.html">MulSeries.pname</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iloc.html">MulSeries.iloc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loc.html">MulSeries.loc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mloc.html">MulSeries.mloc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nloc.html">MulSeries.nloc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="__iter__.html">MulSeries.__iter__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="copy.html">MulSeries.copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="equals.html">MulSeries.equals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reset_index.html">MulSeries.reset_index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="query.html">MulSeries.query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort_values.html">MulSeries.sort_values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drop_duplicates.html">MulSeries.drop_duplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="call.html">MulSeries.call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groupby.html">MulSeries.groupby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="insert.html">MulSeries.insert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drop.html">MulSeries.drop</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../muldataframe/indices.html">MulDataFrame</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/muldataframe.html">MulDataFrame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/index.html">MulDataFrame.index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/columns.html">MulDataFrame.columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/values.html">MulDataFrame.values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/df.html">MulDataFrame.df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/ds.html">MulDataFrame.ds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/shape.html">MulDataFrame.shape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/primary_index.html">MulDataFrame.primary_index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/primary_columns.html">MulDataFrame.primary_columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/mindex.html">MulDataFrame.mindex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/mcolumns.html">MulDataFrame.mcolumns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/mcols.html">MulDataFrame.mcols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/pindex.html">MulDataFrame.pindex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/pcolumns.html">MulDataFrame.pcolumns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/pcols.html">MulDataFrame.pcols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/iloc.html">MulDataFrame.iloc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/loc.html">MulDataFrame.loc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/mloc.html">MulDataFrame.mloc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/nloc.html">MulDataFrame.nloc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/__iter__.html">MulDataFrame.__iter__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/copy.html">MulDataFrame.copy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/equals.html">MulDataFrame.equals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/transpose.html">MulDataFrame.transpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/set_index.html">MulDataFrame.set_index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/reset_index.html">MulDataFrame.reset_index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/query.html">MulDataFrame.query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/iterrows.html">MulDataFrame.iterrows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/sort_values.html">MulDataFrame.sort_values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/drop_duplicates.html">MulDataFrame.drop_duplicates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/call.html">MulDataFrame.call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/groupby.html">MulDataFrame.groupby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/melt.html">MulDataFrame.melt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/insert.html">MulDataFrame.insert</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../muldataframe/drop.html">MulDataFrame.drop</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../groupby/indices.html">MulGroupBy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/mulgroupby.html">MulGroupBy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/parent.html">MulGroupBy.parent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/by.html">MulGroupBy.by</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/index_agg.html">MulGroupBy.index_agg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/indexType.html">MulGroupBy.indexType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/groupBy.html">MulGroupBy.groupBy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/__iter__.html">MulGroupBy.__iter__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../groupby/call.html">MulGroupBy.call</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../utility/indices.html">Utility Functions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../utility/pivot_table.html">pivot_table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utility/concat.html">concat</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">API reference</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="indices.html" class="nav-link">MulSeries</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">MulSeries.pr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="mulseries-primary-name">
+<h1>MulSeries.primary_name<a class="headerlink" href="#mulseries-primary-name" title="Link to this heading">#</a></h1>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="muldataframe.MulSeries.primary_name">
+<span class="sig-prename descclassname"><span class="pre">MulSeries.</span></span><span class="sig-name descname"><span class="pre">primary_name</span></span><a class="headerlink" href="#muldataframe.MulSeries.primary_name" title="Link to this definition">#</a></dt>
+<dd><p>The primary name.</p>
+<p>Shorthand for <code class="docutils literal notranslate"><span class="pre">MulSeries.name.name</span></code>.</p>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="primary_index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">MulSeries.primary_index</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="mindex.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MulSeries.mindex</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#muldataframe.MulSeries.primary_name"><code class="docutils literal notranslate"><span class="pre">MulSeries.primary_name</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/api/mulseries/primary_name.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Qiaonan Duan and Fei Wang.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

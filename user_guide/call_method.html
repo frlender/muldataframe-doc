@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://frlender.github.io/muldataframe-doc/_static/favicon.ico?" rel="icon">
+    <title>Call method &#8212; &lt;img style=&#34;width:50px; margin-right:0.5em&#34; src=&#34;https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png&#34;&gt;MulDataFrame</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/call_method';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pandas methods" href="pandas_methods.html" />
+    <link rel="prev" title="Query" href="query.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title"><img style="width:50px; margin-right:0.5em" src="https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png">MulDataFrame</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="initialization.html">Initialization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexing.html">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multi-indexing.html">Multi-indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query.html">Query</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Call method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pandas_methods.html">Pandas methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numpy_functions.html">Numpy functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compatibility_with_pandas.html">Operators and compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grouping.html">Grouping</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">User Guide</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Call method</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="call-method">
+<h1>Call method<a class="headerlink" href="#call-method" title="Link to this heading">#</a></h1>
+<p>MulDataFrame and MulSeries implements a <code class="docutils literal notranslate"><span class="pre">.call</span></code> method to apply a function to the values dataframe and the values series, respectively. The return value of the method depends on the return value of the function. If the funciton returns a scalar, the method returns a scalar. If the function returns a series, the method returns a mulseries. If the function returns a dataframe, the method returns a muldataframe.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span>
+<span class="go">(3, 2)    g  7  6</span>
+<span class="go">          f  5  3</span>
+<span class="go">             c  d</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c  d</span>
+<span class="go">a  1  2   a  1  2</span>
+<span class="go">b  3  6   b  8  9</span>
+<span class="go">b  5  6   b  8  7</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span><span class="n">df</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">(3, 2)    g  7   6</span>
+<span class="go">          f  5   3</span>
+<span class="go">             c   d</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      c   d</span>
+<span class="go">a  1  2   a  2   3</span>
+<span class="go">b  3  6   b  9  10</span>
+<span class="go">b  5  6   b  9   8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="go">(3,)     Series([], Name: &lt;lambda&gt;, dtype: object)</span>
+<span class="go">-------  -------------------------------------------</span>
+<span class="go">   x  y     &lt;lambda&gt;</span>
+<span class="go">a  1  2  a         3</span>
+<span class="go">b  3  6  b        17</span>
+<span class="go">b  5  6  b        15</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span><span class="p">:</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="go">35</span>
+</pre></div>
+</div>
+<p>If the function has extra parameters, you can place them after the function argument.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">poly</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">(3,)     Series([], Name: poly, dtype: object)</span>
+<span class="go">-------  ---------------------------------------</span>
+<span class="go">   x  y     poly</span>
+<span class="go">a  1  2  a     7</span>
+<span class="go">b  3  6  b    35</span>
+<span class="go">b  5  6  b    31</span>
+</pre></div>
+</div>
+<p>These examples also illustrate a feature of the method that if the values dataframe is reduced to a series by the function, the function name will be the name of the new series.</p>
+<section id="proper-function">
+<span id="id1"></span><h2>Proper function<a class="headerlink" href="#proper-function" title="Link to this heading">#</a></h2>
+<p>Not all functions applicable to the values dataframe are valid input to the call method. I define a proper function as one that can be used as input to the call method. In general, a proper function is either one that returns a scalar or one that returns a series or a dataframe whose index (and columns) can be matched to that (those) of the values series or dataframe. This requirement is necessary for the call method to properly arrange the index (and columns) dataframes for the return value.</p>
+<p>For a mulseries, if the function returns a series, the series must satisfy the following index matching rules:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Its shape must be the same as the values series.</p></li>
+<li><p>If the index of the values series has duplicate values, its index must be the same as the index of the values series.</p></li>
+<li><p>If the index of the values series does not have duplicate values, its index can differ from the index of the values series by order and only by order.</p></li>
+</ul>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ms</span>
+<span class="go">(3,)     g  7</span>
+<span class="go">         f  5</span>
+<span class="go">            c</span>
+<span class="go">-------  ------</span>
+<span class="go">   x  y     c</span>
+<span class="go">a  1  2  a  1</span>
+<span class="go">b  3  6  b  8</span>
+<span class="go">b  5  6  b  8</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">reorder</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">ss</span><span class="o">.</span><span class="n">iloc</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ms</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">reorder</span><span class="p">)</span>
+<span class="go">NotImplementedError</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ms</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">reorder</span><span class="p">)</span>
+<span class="go">(2,)     g  7</span>
+<span class="go">         f  5</span>
+<span class="go">            c</span>
+<span class="go">-------  ------</span>
+<span class="go">   x  y     c</span>
+<span class="go">b  3  6  b  8</span>
+<span class="go">a  1  2  a  1</span>
+</pre></div>
+</div>
+<p>For a muldataframe, if the function returns a dataframe, the dataframe’s index and columns must both satisfy the index matching rules as shown above.</p>
+<p>For a muldataframe, if the function returns a series, the method will run the following procedures:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Match the series’ index to the index and the columns of the values dataframe using the index matching rules. If one matches and the other does not match, it will construct a mulseries using the series as the values series and the matched index (or columns) dataframe as the index dataframe. The mulseries will be returned by the call method.</p></li>
+<li><p>If both match, it will try to find if the function has a <code class="docutils literal notranslate"><span class="pre">axis</span></code> keyword argument. If it exists and <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> or defaults to 1, it will use the index dataframe as the index dataframe of the mulseries. If it exists and <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> or defaults to 0, it will use the columns dataframe as the index dataframe of the mulseries.</p></li>
+<li><p>If both match and the <code class="docutils literal notranslate"><span class="pre">axis</span></code> argument does not exist, the call method raises <code class="docutils literal notranslate"><span class="pre">NotImplementedError</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span>
+<span class="go">(2, 2)    g  7  6</span>
+<span class="go">          f  5  3</span>
+<span class="go">             a  b</span>
+<span class="go">--------  ---------</span>
+<span class="go">   x  y      a  b</span>
+<span class="go">a  1  2   a  1  2</span>
+<span class="go">b  3  6   b  8  9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="nb">sum</span><span class="p">)</span>
+<span class="go">(2,)     Series([], Name: sum, dtype: object)</span>
+<span class="go">-------  --------------------------------------</span>
+<span class="go">   f  g     sum</span>
+<span class="go">a  5  7  a    9</span>
+<span class="go">b  3  6  b   11</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="nb">sum</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">(2,)     Series([], Name: sum, dtype: object)</span>
+<span class="go">-------  --------------------------------------</span>
+<span class="go">   x  y     sum</span>
+<span class="go">a  1  2  a    3</span>
+<span class="go">b  3  6  b   17</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">sum2</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="gp">... </span>  <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mf2</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">sum2</span><span class="p">)</span>
+<span class="go">NotImplementedError</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="query.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Query</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pandas_methods.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pandas methods</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proper-function">Proper function</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/user_guide/call_method.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, Qiaonan Duan and Fei Wang.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
