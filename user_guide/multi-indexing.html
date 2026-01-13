@@ -8,7 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://frlender.github.io/muldataframe-doc/_static/favicon.ico?" rel="icon">
-    <title>Multi-indexing &#8212; &lt;img style=&#34;width:50px; margin-right:0.5em&#34; src=&#34;https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png&#34;&gt;MulDataFrame</title>
+<title>Multi-indexing</title>
+
   
   
   
@@ -42,7 +43,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Query" href="query.html" />
-    <link rel="prev" title="Indexing" href="indexing.html" />
+    <link rel="prev" title="Primary Indexing" href="indexing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -277,7 +278,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="initialization.html">Initialization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="indexing.html">Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexing.html">Primary Indexing</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Multi-indexing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="query.html">Query</a></li>
 <li class="toctree-l1"><a class="reference internal" href="call_method.html">Call method</a></li>
@@ -406,8 +407,8 @@ document.write(`
 <span class="go">3 6  8  9</span>
 </pre></div>
 </div>
-<p>An intricacy to notice is that <code class="docutils literal notranslate"><span class="pre">mf.mloc[[3,[2,6]]]</span></code> does not report an error and returns the second row as a mulseries. This is because successive indexing is implemented as such that when a scalar selection is reached in the middle of a multi-indexing, the following indexers only need to include this selection to be valid. The example also shows you must fill in <code class="docutils literal notranslate"><span class="pre">:</span></code> as the column indexer in hierachical indexing even if you only need to index rows.</p>
-<p>With a dict as input, you can change the order of successive indexing and fix the error in the above example:</p>
+<p>Of note, <code class="docutils literal notranslate"><span class="pre">mf.mloc[[3,[2,6]]]</span></code> will report a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> as successive indexing does not allow multi-index selection after a scalar selection. On the other hand, hierachical indexing in pandas allows this but with the intricacy that it does not support real scalar selection: <code class="docutils literal notranslate"><span class="pre">df.loc[idx[3,[2,6]],:]</span></code> yields a dataframe instead of a series. The example also shows you must fill in <code class="docutils literal notranslate"><span class="pre">:</span></code> as the column indexer in hierachical indexing even if you only need to index rows.</p>
+<p>With a dict as input, you can change the order of successive indexing and fix the error in the above code block:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">mloc</span><span class="p">[{</span><span class="s1">&#39;y&#39;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span><span class="s1">&#39;x&#39;</span><span class="p">:[</span><span class="mi">3</span><span class="p">]}]</span>
 <span class="go">(1, 2)    g  7  6</span>
 <span class="go">          f  5  3</span>
@@ -519,7 +520,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Indexing</p>
+        <p class="prev-next-title">Primary Indexing</p>
       </div>
     </a>
     <a class="right-next"

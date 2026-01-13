@@ -1,4 +1,4 @@
-Indexing
+Primary Indexing
 ==========
 
 .. TODO: loc and iloc as setter
@@ -20,6 +20,7 @@ b  5  6   b  8  7
              d
 --------  ---------
    x  y      d
+a  1  2   a  2 
 b  3  6   b  9
 b  5  6   b  7
 >>> mf.loc['b']

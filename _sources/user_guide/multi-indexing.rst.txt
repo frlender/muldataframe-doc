@@ -69,9 +69,9 @@ x y
 x y      
 3 6  8  9
 
-An intricacy to notice is that ``mf.mloc[[3,[2,6]]]`` does not report an error and returns the second row as a mulseries. This is because successive indexing is implemented as such that when a scalar selection is reached in the middle of a multi-indexing, the following indexers only need to include this selection to be valid. The example also shows you must fill in ``:`` as the column indexer in hierachical indexing even if you only need to index rows. 
+Of note, ``mf.mloc[[3,[2,6]]]`` will report a ``KeyError`` as successive indexing does not allow multi-index selection after a scalar selection. On the other hand, hierachical indexing in pandas allows this but with the intricacy that it does not support real scalar selection: ``df.loc[idx[3,[2,6]],:]`` yields a dataframe instead of a series. The example also shows you must fill in ``:`` as the column indexer in hierachical indexing even if you only need to index rows. 
 
-With a dict as input, you can change the order of successive indexing and fix the error in the above example:
+With a dict as input, you can change the order of successive indexing and fix the error in the above code block:
 
 >>> mf.mloc[{'y':[2,6],'x':[3]}]
 (1, 2)    g  7  6

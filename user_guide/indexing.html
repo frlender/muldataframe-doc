@@ -8,7 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://frlender.github.io/muldataframe-doc/_static/favicon.ico?" rel="icon">
-    <title>Indexing &#8212; &lt;img style=&#34;width:50px; margin-right:0.5em&#34; src=&#34;https://frlender.github.io/muldataframe-doc/_static/android-chrome-192x192.png&#34;&gt;MulDataFrame</title>
+<title>Primary Indexing</title>
+
   
   
   
@@ -277,7 +278,7 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_structures.html">Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="initialization.html">Initialization</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Indexing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Primary Indexing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multi-indexing.html">Multi-indexing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="query.html">Query</a></li>
 <li class="toctree-l1"><a class="reference internal" href="call_method.html">Call method</a></li>
@@ -325,7 +326,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">User Guide</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Indexing</li>
+    <li class="breadcrumb-item active" aria-current="page">Primary Indexing</li>
   </ul>
 </nav>
 </div>
@@ -342,8 +343,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="indexing">
-<h1>Indexing<a class="headerlink" href="#indexing" title="Link to this heading">#</a></h1>
+  <section id="primary-indexing">
+<h1>Primary Indexing<a class="headerlink" href="#primary-indexing" title="Link to this heading">#</a></h1>
 <p>Because of the primary index and columns (see <a class="reference internal" href="data_structures.html"><span class="doc">Data structures</span></a>), you can use <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code>, <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> and <code class="docutils literal notranslate"><span class="pre">.loc</span></code> on a muldataframe exactly as on its values dataframe, except that the return value is a muldataframe (or a mulseries) with its index and columns properly sliced. The same mechanism applies to a mulseries.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span>
 <span class="go">(3, 2)    g  7  6</span>
@@ -360,6 +361,7 @@ document.write(`
 <span class="go">             d</span>
 <span class="go">--------  ---------</span>
 <span class="go">   x  y      d</span>
+<span class="go">a  1  2   a  2</span>
 <span class="go">b  3  6   b  9</span>
 <span class="go">b  5  6   b  7</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
